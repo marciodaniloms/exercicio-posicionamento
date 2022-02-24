@@ -177,4 +177,7 @@ ul{
     p{
         font-size: 2rem;
     }
+    .introducao-cover{
+        max-width: 420;
+    }
 }
