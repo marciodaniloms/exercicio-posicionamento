@@ -167,7 +167,7 @@ ul{
         justify-items: start;
     }
     .subtitulo{
-        font-size: 3rem/;
+        font-size: 3rem;
     }
 }
 @media(max-width: 400px){
