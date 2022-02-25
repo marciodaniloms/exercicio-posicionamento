@@ -84,7 +84,7 @@ ul{
 }
 .introducao-cover img{ /*Tem objetivo de manter altura da imagem ao diminuir a tela*/
     object-fit: cover;
-    height: 100%;
+    min-height: 100%;
 }
 .detalhe{
     width: 60px;
