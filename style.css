@@ -1,11 +1,31 @@
+:root{
+    --cor-primaria: #e21;
+    --cor-primaria-escura: #900;
+    --fundo-1: #f7f7f7;
+    --fundo-2: #ffffff;
+    --texto: #000000;
+    --subtitulo: rgba(0, 0, 0, 0.2);
+    --onda: url("./img/onda-clara.svg");
+}
+
+@media(prefers-color-scheme: dark){
+    :root{
+        --fundo-1: #111111;
+        --fundo-2: #000000; 
+        --texto: #ffffff;
+        --subtitulo: rgba(255, 255, 255, 0.2);
+        --onda: url("./img/onda-escura.svg");
+    }
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0; 
-    background: #f7f7f7;
+    background: var(--fundo-1);
     display: grid;
     gap: 60px; /*distância entre os elementos na vertical*/
     justify-items: center; /*alinha itens ao centro*/
     margin-top: 60px;  /*Distância do topo*/
+    color: var(--texto)
 }
 
 img{
@@ -44,14 +64,14 @@ ul{
 }   
 .menu a{
     display: block;
-    background: #ffffff;
+    background: var(--fundo-2);
     padding: 1rem 2rem; /*15 pra cima e pra baixo, 30px pros lados*/
     border-radius: 4px; /*arredondamento de borda*/
-    color: black;
-    border: 2px solid #fff;
+    color: var(--texto);
+    border: 2px solid var(--fundo-2);
 }
 .menu a:hover{
-    border-color:#e21;
+    border-color: var(--cor-primaria);
 }
 .conteudo{
     display: grid;
@@ -60,7 +80,7 @@ ul{
 }
 .introducao{
     display: grid; /*Muda comportamento dos elementos para tornar elementos de GRID*/
-    background: #ffffff;
+    background: var(--fundo-2);
     padding: 40px; /*desgrudar elementos da ponta*/
     text-align: right;
     position: relative; /*necessário para posicionar o detalhe em relação a esta DIV*/
@@ -76,7 +96,7 @@ ul{
     display: block;
     width: 60px;
     height:4px;
-    background: #e21;
+    background: var(--cor-primaria);
     position: absolute; /*Posiciona*/
     top: 30px; /*Distância em relação ao elemento PAI*/
     right: -30px;
@@ -89,31 +109,30 @@ ul{
 .detalhe{
     width: 60px;
     height:4px;
-    background: #e21;
+    background: var(--cor-primaria);
     position: absolute; /*Posiciona*/
     top: 30px; /*Distância em relação ao elemento PAI*/
     right: -30px;
 }
 .botao{
-    background: #e21;
-    color: #fff;
+    background: var(--cor-primaria);
+    color: #ffffff;
     padding: 1rem 2rem;
 }
 .botao:hover{
-    background:rgb(116, 15, 6);
-    color: #fff;
+    background: #900;
 }
 .subtitulo{
     font-size: 4rem;
-    color: #c6c6c6;
+    color: var(--subtitulo);
     text-align: right;
     padding: 40px;
     align-self: center; /*Alinha único elemento ao centro(verticalmente)*/
-    background-image: url("img/onda.svg");
+    background-image: var(--onda);
     /*word-break: break-all;*/
 }
 .vantagens{
-    background-color: #fff;
+    background-color: var(--fundo-2);
     padding: 40px;
 }   
 .vantagens-item{
@@ -124,17 +143,17 @@ ul{
     border-left: 4px solid transparent;
 }
 .vantagens-item:hover{
-    border-color: #e21;
+    border-color: var(--cor-primaria);
     
 }
 .vantagens-item:nth-child(odd){
-    background: #f7f7f7;
+    background: var(--fundo-1);
 }
 .vantagens-item p{
     grid-column: 2; /*coloca o elemento na segunda coluna*/
 }
 .rodape{
-    background: #fff;
+    background: var(--fundo-2);
     width: 100%;
     text-align: center;
     padding: 40px;
@@ -177,4 +196,5 @@ ul{
     p{
         font-size: 2rem;
     }
+ 
 }
